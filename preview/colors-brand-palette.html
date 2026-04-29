@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#03030f; font-family:'Space Mono',monospace; padding:20px; }
+  .row { display:flex; gap:12px; }
+  .swatch { flex:1; height:80px; display:flex; flex-direction:column; justify-content:flex-end; padding:8px; position:relative; }
+  .swatch-label { font-size:9px; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.6); }
+  .swatch-val { font-size:10px; color:rgba(255,255,255,0.4); margin-top:2px; }
+  .swatch.cyan { background:#00f0ff; box-shadow:0 0 20px rgba(0,240,255,0.5); }
+  .swatch.pink { background:#ff0099; box-shadow:0 0 20px rgba(255,0,153,0.5); }
+  .swatch.purple { background:#7700ff; box-shadow:0 0 20px rgba(119,0,255,0.5); }
+  .swatch.bg { background:#03030f; border:1px solid rgba(255,255,255,0.08); }
+  .swatch.bg2 { background:#060614; border:1px solid rgba(255,255,255,0.08); }
+  .swatch.text { background:#c8d6e5; }
+  .swatch.text-dim { background:#5a6a7a; }
+  .swatch.white { background:#ffffff; }
+  .swatch.cyan .swatch-label, .swatch.pink .swatch-label, .swatch.purple .swatch-label { color:rgba(0,0,0,0.6); }
+  .swatch.text .swatch-label, .swatch.white .swatch-label { color:rgba(0,0,0,0.6); }
+  .swatch.cyan .swatch-val, .swatch.pink .swatch-val, .swatch.purple .swatch-val { color:rgba(0,0,0,0.4); }
+  .swatch.text .swatch-val, .swatch.white .swatch-val { color:rgba(0,0,0,0.4); }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="swatch cyan"><span class="swatch-label">Cyan</span><span class="swatch-val">#00f0ff</span></div>
+  <div class="swatch pink"><span class="swatch-label">Pink</span><span class="swatch-val">#ff0099</span></div>
+  <div class="swatch purple"><span class="swatch-label">Purple</span><span class="swatch-val">#7700ff</span></div>
+  <div class="swatch bg"><span class="swatch-label">BG</span><span class="swatch-val">#03030f</span></div>
+  <div class="swatch bg2"><span class="swatch-label">BG2</span><span class="swatch-val">#060614</span></div>
+  <div class="swatch text"><span class="swatch-label">Text</span><span class="swatch-val">#c8d6e5</span></div>
+  <div class="swatch text-dim"><span class="swatch-label">Dim</span><span class="swatch-val">#5a6a7a</span></div>
+  <div class="swatch white"><span class="swatch-label">White</span><span class="swatch-val">#ffffff</span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#03030f; font-family:'Space Mono',monospace; padding:20px; }
+  .grid { display:flex; gap:8px; align-items:flex-end; }
+  .bar-wrap { display:flex; flex-direction:column; align-items:center; gap:6px; }
+  .bar { background:linear-gradient(to top, #00f0ff, #7700ff); width:16px; opacity:0.85; }
+  .lbl { font-size:8px; color:#5a6a7a; letter-spacing:0.1em; white-space:nowrap; transform:rotate(-45deg); transform-origin:top left; margin-top:8px; }
+  .val { font-size:8px; color:#00f0ff; letter-spacing:0.05em; }
+  .radius-row { display:flex; gap:14px; margin-top:18px; align-items:center; }
+  .r-box { width:40px; height:40px; background:rgba(0,240,255,0.08); border:1px solid rgba(0,240,255,0.3); }
+  .r-label { font-size:9px; color:#5a6a7a; letter-spacing:0.1em; }
+  .section-note { font-size:9px; color:#5a6a7a; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:10px; }
+</style>
+</head>
+<body>
+  <div class="section-note">Spacing Scale</div>
+  <div class="grid">
+    <div class="bar-wrap"><div class="val">4px</div><div class="bar" style="height:4px"></div><div class="lbl">space-1</div></div>
+    <div class="bar-wrap"><div class="val">8px</div><div class="bar" style="height:8px"></div><div class="lbl">space-2</div></div>
+    <div class="bar-wrap"><div class="val">12px</div><div class="bar" style="height:12px"></div><div class="lbl">space-3</div></div>
+    <div class="bar-wrap"><div class="val">16px</div><div class="bar" style="height:16px"></div><div class="lbl">space-4</div></div>
+    <div class="bar-wrap"><div class="val">24px</div><div class="bar" style="height:24px"></div><div class="lbl">space-6</div></div>
+    <div class="bar-wrap"><div class="val">32px</div><div class="bar" style="height:32px"></div><div class="lbl">space-8</div></div>
+    <div class="bar-wrap"><div class="val">48px</div><div class="bar" style="height:48px"></div><div class="lbl">space-12</div></div>
+    <div class="bar-wrap"><div class="val">64px</div><div class="bar" style="height:64px"></div><div class="lbl">space-16</div></div>
+    <div class="bar-wrap"><div class="val">128px</div><div class="bar" style="height:80px;opacity:0.5"></div><div class="lbl">space-32</div></div>
+  </div>
+  <div class="radius-row" style="margin-top:24px;">
+    <div>
+      <div class="section-note" style="margin-bottom:8px;">Border Radius</div>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <div class="r-box" style="border-radius:0px"></div>
+        <div class="r-label">0px — Sharp edges only<br><span style="color:#00f0ff">Cyberpunk rule: no rounding</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

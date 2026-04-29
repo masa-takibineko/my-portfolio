@@ -1,0 +1,228 @@
+/*
+ * takibineko Design System — Colors & Typography
+ * Brand: takibineko (TBN) | Cyberpunk / Synthwave
+ * Fonts: Orbitron (display), Space Mono (body/mono)
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* ─── Base Color Tokens ─────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --tbn-bg:           #03030f;   /* Primary background — near-black indigo */
+  --tbn-bg2:          #060614;   /* Card / panel background */
+  --tbn-bg3:          #0a0a1e;   /* Slightly lighter surface */
+  --tbn-bg-overlay:   rgba(0, 0, 0, 0.25); /* Section overlay */
+
+  /* Neon Accents */
+  --tbn-cyan:         #00f0ff;   /* Primary accent — electric cyan */
+  --tbn-pink:         #ff0099;   /* Secondary accent — hot magenta */
+  --tbn-purple:       #7700ff;   /* Tertiary — electric violet */
+
+  /* Cyan scale */
+  --tbn-cyan-dim:     rgba(0, 240, 255, 0.15);
+  --tbn-cyan-mid:     rgba(0, 240, 255, 0.40);
+  --tbn-cyan-glow:    rgba(0, 240, 255, 0.70);
+
+  /* Pink scale */
+  --tbn-pink-dim:     rgba(255, 0, 153, 0.10);
+  --tbn-pink-mid:     rgba(255, 0, 153, 0.30);
+  --tbn-pink-glow:    rgba(255, 0, 153, 0.70);
+
+  /* Purple scale */
+  --tbn-purple-dim:   rgba(119, 0, 255, 0.10);
+  --tbn-purple-mid:   rgba(119, 0, 255, 0.30);
+
+  /* Text */
+  --tbn-text:         #c8d6e5;   /* Primary text — cool light blue-grey */
+  --tbn-text-dim:     #5a6a7a;   /* Muted / secondary text */
+  --tbn-text-bright:  #ffffff;   /* Maximum contrast / headings */
+
+  /* Gradients */
+  --tbn-grad-accent:  linear-gradient(to right, var(--tbn-cyan), var(--tbn-pink));
+  --tbn-grad-bg:      linear-gradient(135deg, var(--tbn-bg) 0%, var(--tbn-bg2) 100%);
+  --tbn-grad-conic:   conic-gradient(from 0deg, var(--tbn-cyan), var(--tbn-pink), var(--tbn-purple), var(--tbn-cyan));
+
+  /* ─── Semantic Color Tokens ───────────────────────── */
+  --tbn-color-primary:      var(--tbn-cyan);
+  --tbn-color-secondary:    var(--tbn-pink);
+  --tbn-color-tertiary:     var(--tbn-purple);
+  --tbn-color-fg:           var(--tbn-text);
+  --tbn-color-fg-muted:     var(--tbn-text-dim);
+  --tbn-color-fg-heading:   var(--tbn-text-bright);
+  --tbn-color-bg:           var(--tbn-bg);
+  --tbn-color-bg-card:      var(--tbn-bg2);
+  --tbn-color-border:       var(--tbn-cyan-dim);
+  --tbn-color-border-hover: var(--tbn-cyan);
+
+  /* ─── Typography Tokens ───────────────────────────── */
+  --tbn-font-display:   'Orbitron', 'Courier New', monospace;
+  --tbn-font-body:      'Space Mono', 'Courier New', monospace;
+  --tbn-font-mono:      'Space Mono', 'Courier New', monospace;
+
+  /* Scale */
+  --tbn-text-xs:    0.62rem;    /* 9.9px  — micro labels, copyright */
+  --tbn-text-sm:    0.7rem;     /* 11.2px — nav links, tags, stat labels */
+  --tbn-text-base:  0.78rem;    /* 12.5px — card body text */
+  --tbn-text-md:    0.82rem;    /* 13.1px — section body text */
+  --tbn-text-lg:    1rem;       /* 16px   — card titles */
+  --tbn-text-xl:    1.3rem;     /* 20.8px — contact email */
+  --tbn-text-2xl:   clamp(1.4rem, 4vw, 2.2rem); /* section titles */
+  --tbn-text-hero:  clamp(2.5rem, 9vw, 7rem);    /* hero display */
+
+  /* Letter Spacing */
+  --tbn-tracking-tight:  0.05em;
+  --tbn-tracking-base:   0.08em;
+  --tbn-tracking-wide:   0.2em;
+  --tbn-tracking-wider:  0.3em;
+  --tbn-tracking-widest: 0.4em;
+
+  /* Line Height */
+  --tbn-leading-tight:  1;
+  --tbn-leading-snug:   1.5;
+  --tbn-leading-body:   1.9;
+  --tbn-leading-loose:  2.1;
+
+  /* ─── Spacing Scale ───────────────────────────────── */
+  --tbn-space-1:   0.25rem;
+  --tbn-space-2:   0.5rem;
+  --tbn-space-3:   0.75rem;
+  --tbn-space-4:   1rem;
+  --tbn-space-6:   1.5rem;
+  --tbn-space-8:   2rem;
+  --tbn-space-12:  3rem;
+  --tbn-space-16:  4rem;
+  --tbn-space-32:  8rem;
+
+  /* ─── Effects ─────────────────────────────────────── */
+  --tbn-radius:        0px;    /* NO rounded corners — cyberpunk sharp edges */
+  --tbn-blur-card:     blur(10px);
+  --tbn-blur-nav:      blur(10px);
+
+  /* Glow — text */
+  --tbn-glow-cyan-text:
+    0 0 20px var(--tbn-cyan),
+    0 0 40px rgba(0, 240, 255, 0.4);
+  --tbn-glow-cyan-text-strong:
+    0 0 40px var(--tbn-cyan),
+    0 0 80px rgba(0, 240, 255, 0.3);
+  --tbn-glow-pink-text:
+    0 0 30px var(--tbn-pink),
+    0 0 60px rgba(255, 0, 153, 0.3);
+
+  /* Glow — box */
+  --tbn-glow-cyan-box:
+    0 20px 60px rgba(0, 240, 255, 0.15),
+    0 0 40px rgba(0, 240, 255, 0.08);
+  --tbn-glow-cyan-box-hover:
+    0 0 30px var(--tbn-cyan),
+    0 0 60px rgba(0, 240, 255, 0.3);
+  --tbn-glow-pink-box-hover:
+    0 0 30px rgba(255, 0, 153, 0.3);
+
+  /* ─── Transition Presets ──────────────────────────── */
+  --tbn-transition-fast:   0.1s ease;
+  --tbn-transition-base:   0.3s ease;
+  --tbn-transition-reveal: 0.7s ease;
+  --tbn-transition-spring: 0.55s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --tbn-transition-tilt:   0.08s ease;
+}
+
+/* ─── Semantic Type Styles ──────────────────────────── */
+
+/* Hero display */
+.tbn-h-hero {
+  font-family: var(--tbn-font-display);
+  font-size: var(--tbn-text-hero);
+  font-weight: 900;
+  line-height: var(--tbn-leading-tight);
+  letter-spacing: var(--tbn-tracking-tight);
+  color: var(--tbn-text-bright);
+  text-shadow: var(--tbn-glow-cyan-text);
+}
+
+/* Section headings */
+.tbn-h1 {
+  font-family: var(--tbn-font-display);
+  font-size: var(--tbn-text-2xl);
+  font-weight: 700;
+  letter-spacing: var(--tbn-tracking-tight);
+  color: var(--tbn-text-bright);
+}
+
+/* Card / component headings */
+.tbn-h2 {
+  font-family: var(--tbn-font-display);
+  font-size: var(--tbn-text-lg);
+  font-weight: 700;
+  letter-spacing: var(--tbn-tracking-tight);
+  color: var(--tbn-text-bright);
+}
+
+/* Sub-heading / about heading */
+.tbn-h3 {
+  font-family: var(--tbn-font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+  font-weight: 700;
+  line-height: var(--tbn-leading-snug);
+  color: var(--tbn-text-bright);
+}
+
+/* Body text */
+.tbn-body {
+  font-family: var(--tbn-font-body);
+  font-size: var(--tbn-text-md);
+  line-height: var(--tbn-leading-body);
+  color: var(--tbn-color-fg);
+}
+
+/* Card body (slightly smaller) */
+.tbn-body-sm {
+  font-family: var(--tbn-font-body);
+  font-size: var(--tbn-text-base);
+  line-height: var(--tbn-leading-body);
+  color: var(--tbn-color-fg-muted);
+}
+
+/* Section number label */
+.tbn-label {
+  font-family: var(--tbn-font-body);
+  font-size: var(--tbn-text-xs);
+  letter-spacing: var(--tbn-tracking-widest);
+  color: var(--tbn-cyan);
+  text-transform: uppercase;
+}
+
+/* Nav / button text */
+.tbn-nav {
+  font-family: var(--tbn-font-body);
+  font-size: var(--tbn-text-sm);
+  letter-spacing: var(--tbn-tracking-wide);
+  text-transform: uppercase;
+  color: var(--tbn-text-dim);
+}
+
+/* Tag / badge */
+.tbn-tag {
+  font-family: var(--tbn-font-body);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--tbn-cyan);
+}
+
+/* Stat number */
+.tbn-stat {
+  font-family: var(--tbn-font-display);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--tbn-cyan);
+  text-shadow: var(--tbn-glow-cyan-text);
+}
+
+/* Code / mono inline */
+code, .tbn-code {
+  font-family: var(--tbn-font-mono);
+  font-size: 0.85em;
+  color: var(--tbn-cyan);
+}

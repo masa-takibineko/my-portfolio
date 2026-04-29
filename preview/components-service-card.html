@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#03030f; padding:20px; display:flex; gap:16px; }
+
+  @property --ba { syntax:'<angle>'; initial-value:0deg; inherits:false; }
+  @keyframes borderSpin { to { --ba:360deg; } }
+
+  .card {
+    flex:1; padding:28px; position:relative; overflow:hidden;
+    background:rgba(6,6,20,0.7); border:2px solid rgba(0,240,255,0.15);
+    backdrop-filter:blur(10px); min-width:0;
+  }
+  .card:hover { box-shadow:0 20px 60px rgba(0,240,255,0.15), 0 0 40px rgba(0,240,255,0.08); }
+  .card:hover .card-border { opacity:1; }
+
+  .card-border {
+    position:absolute; inset:-2px; pointer-events:none; z-index:0; opacity:0; transition:opacity 0.4s;
+    border:2px solid transparent;
+    background:
+      linear-gradient(rgba(6,6,20,0),rgba(6,6,20,0)) padding-box,
+      conic-gradient(from var(--ba,0deg), #00f0ff, #ff0099, #7700ff, #00f0ff) border-box;
+    animation:borderSpin 3s linear infinite;
+  }
+  .num { position:absolute; top:16px; right:16px; font-family:'Orbitron',monospace; font-size:10px; color:rgba(0,240,255,0.15); z-index:2; }
+  .icon { font-size:28px; margin-bottom:16px; color:#00f0ff; text-shadow:0 0 20px #00f0ff, 0 0 40px rgba(0,240,255,0.4); display:block; z-index:2; position:relative; }
+  .title { font-family:'Orbitron',monospace; font-size:13px; font-weight:700; color:#fff; margin-bottom:10px; letter-spacing:0.05em; z-index:2; position:relative; }
+  .desc { font-family:'Space Mono',monospace; font-size:11px; line-height:1.9; color:#5a6a7a; z-index:2; position:relative; }
+  .tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; z-index:2; position:relative; }
+  .tag { padding:3px 10px; border:1px solid rgba(0,240,255,0.2); font-family:'Space Mono',monospace; font-size:9px; letter-spacing:0.1em; color:#00f0ff; text-transform:uppercase; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-border"></div>
+    <span class="num">01</span>
+    <span class="icon">◈</span>
+    <div class="title">HP / LP 制作</div>
+    <div class="desc">デザイン性と機能性を兼ね備えたウェブサイト制作。</div>
+    <div class="tags">
+      <span class="tag">HTML/CSS</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">React</span>
+    </div>
+  </div>
+  <div class="card" style="border-color:rgba(0,240,255,0.4);box-shadow:0 20px 60px rgba(0,240,255,0.15);">
+    <div class="card-border" style="opacity:1;"></div>
+    <span class="num">02</span>
+    <span class="icon">◇</span>
+    <div class="title">Bot 開発</div>
+    <div class="desc">LINE自動返信Botをはじめ、各種プラットフォームに対応。</div>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">LINE API</span>
+    </div>
+  </div>
+</body>
+</html>

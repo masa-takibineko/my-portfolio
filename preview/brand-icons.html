@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#03030f; font-family:'Space Mono',monospace; padding:24px; }
+  .label { font-size:9px; letter-spacing:0.3em; color:#5a6a7a; text-transform:uppercase; margin-bottom:16px; }
+  .icons { display:flex; gap:24px; align-items:center; }
+  .icon-item { display:flex; flex-direction:column; align-items:center; gap:8px; }
+  .icon { font-size:32px; color:#00f0ff; text-shadow:0 0 20px #00f0ff, 0 0 40px rgba(0,240,255,0.4); animation:pulse 3s ease-in-out infinite; }
+  .icon.pink { color:#ff0099; text-shadow:0 0 20px #ff0099, 0 0 40px rgba(255,0,153,0.4); }
+  .icon-name { font-size:9px; color:#5a6a7a; letter-spacing:0.1em; }
+  .icon-unicode { font-size:9px; color:rgba(0,240,255,0.3); }
+  @keyframes pulse {
+    0%,100%{text-shadow:0 0 20px #00f0ff, 0 0 40px rgba(0,240,255,0.4)}
+    50%{text-shadow:0 0 35px #00f0ff, 0 0 70px rgba(0,240,255,0.6)}
+  }
+  .note { margin-top:20px; font-size:10px; color:#5a6a7a; line-height:1.8; }
+  .note span { color:#00f0ff; }
+</style>
+</head>
+<body>
+  <div class="label">Geometric Unicode Icons</div>
+  <div class="icons">
+    <div class="icon-item">
+      <span class="icon">◈</span>
+      <span class="icon-name">Web / HP</span>
+      <span class="icon-unicode">U+25C8</span>
+    </div>
+    <div class="icon-item">
+      <span class="icon">◇</span>
+      <span class="icon-name">Bot</span>
+      <span class="icon-unicode">U+25C7</span>
+    </div>
+    <div class="icon-item">
+      <span class="icon">◉</span>
+      <span class="icon-name">AI</span>
+      <span class="icon-unicode">U+25C9</span>
+    </div>
+    <div class="icon-item">
+      <span class="icon pink">◆</span>
+      <span class="icon-name">Accent</span>
+      <span class="icon-unicode">U+25C6</span>
+    </div>
+    <div class="icon-item">
+      <span class="icon" style="font-size:20px;color:#fff;text-shadow:none;">→</span>
+      <span class="icon-name">Arrow</span>
+      <span class="icon-unicode">U+2192</span>
+    </div>
+    <div class="icon-item">
+      <span class="icon" style="font-size:16px;color:#00f0ff;text-shadow:0 0 10px #00f0ff;">// </span>
+      <span class="icon-name">Code Prefix</span>
+      <span class="icon-unicode">ASCII</span>
+    </div>
+  </div>
+  <p class="note">
+    No icon library — brand uses <span>Unicode geometric shapes</span> only.<br>
+    Icons styled with neon glow via text-shadow. No SVGs, no icon fonts.
+  </p>
+</body>
+</html>

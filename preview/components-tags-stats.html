@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#03030f; font-family:'Space Mono',monospace; padding:20px; display:flex; gap:24px; align-items:flex-start; }
+  .col { display:flex; flex-direction:column; gap:12px; }
+  .label { font-size:9px; letter-spacing:0.3em; color:#5a6a7a; text-transform:uppercase; }
+
+  .tags { display:flex; flex-wrap:wrap; gap:6px; }
+  .tag { padding:4px 12px; border:1px solid rgba(0,240,255,0.2); font-size:9px; letter-spacing:0.1em; color:#00f0ff; text-transform:uppercase; transition:all 0.3s; cursor:default; }
+  .tag:hover { border-color:#00f0ff; background:rgba(0,240,255,0.1); box-shadow:0 0 10px rgba(0,240,255,0.2); }
+  .tag.pink { color:#ff0099; border-color:rgba(255,0,153,0.2); }
+
+  .stat {
+    padding:20px 18px; border:1px solid rgba(0,240,255,0.1); text-align:center;
+    background:rgba(6,6,20,0.5); backdrop-filter:blur(5px); min-width:90px;
+    transition:border-color 0.3s, transform 0.3s, box-shadow 0.3s; cursor:default;
+    position:relative;
+  }
+  .stat::after { content:''; position:absolute; bottom:0; left:0; width:0; height:2px; background:linear-gradient(to right,#00f0ff,#ff0099); transition:width 0.5s ease; }
+  .stat:hover { border-color:rgba(0,240,255,0.4); transform:translateY(-4px); box-shadow:0 10px 40px rgba(0,240,255,0.1); }
+  .stat:hover::after { width:100%; }
+  .stat-num { font-family:'Orbitron',monospace; font-size:28px; font-weight:900; color:#00f0ff; display:block; text-shadow:0 0 30px rgba(0,240,255,0.5); }
+  .stat-lbl { font-size:9px; letter-spacing:0.25em; color:#5a6a7a; text-transform:uppercase; margin-top:4px; display:block; }
+
+  .section-line { width:50px; height:2px; background:linear-gradient(to right,#00f0ff,#ff0099); position:relative; }
+  .section-line::after { content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:6px; height:6px; background:#00f0ff; border-radius:50%; box-shadow:0 0 10px #00f0ff; }
+</style>
+</head>
+<body>
+  <div class="col">
+    <div class="label">Tech Tags</div>
+    <div class="tags">
+      <span class="tag">HTML/CSS</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">React</span>
+      <span class="tag">Python</span>
+      <span class="tag">LINE API</span>
+      <span class="tag">Claude API</span>
+      <span class="tag pink">OpenAI</span>
+      <span class="tag pink">LangChain</span>
+    </div>
+    <div class="label" style="margin-top:8px;">Section Divider</div>
+    <div class="section-line"></div>
+  </div>
+  <div class="col">
+    <div class="label">Stat Items</div>
+    <div style="display:flex;gap:10px;">
+      <div class="stat"><span class="stat-num">50+</span><span class="stat-lbl">Projects</span></div>
+      <div class="stat"><span class="stat-num">30+</span><span class="stat-lbl">Clients</span></div>
+      <div class="stat"><span class="stat-num">3+</span><span class="stat-lbl">Years Exp.</span></div>
+    </div>
+  </div>
+</body>
+</html>

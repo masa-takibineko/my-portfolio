@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#03030f; padding:24px; display:flex; gap:32px; align-items:center; }
+  .logo-lg {
+    font-family:'Orbitron',monospace; font-weight:900; font-size:42px; color:#00f0ff;
+    letter-spacing:0.2em;
+    text-shadow:0 0 20px #00f0ff, 0 0 40px rgba(0,240,255,0.4);
+    animation:flicker 9s infinite;
+  }
+  .logo-sm {
+    font-family:'Orbitron',monospace; font-weight:900; font-size:16px; color:#00f0ff;
+    letter-spacing:0.25em;
+    text-shadow:0 0 15px #00f0ff;
+  }
+  .logo-footer {
+    font-family:'Orbitron',monospace; font-weight:900; font-size:14px;
+    color:rgba(0,240,255,0.2); letter-spacing:0.25em;
+  }
+  .wordmark {
+    font-family:'Orbitron',monospace; font-weight:700; font-size:18px; color:#fff;
+    letter-spacing:0.15em;
+    text-shadow:0 0 30px rgba(255,255,255,0.2);
+  }
+  @keyframes flicker {
+    0%,19%,21%,23%,25%,54%,56%,100%{opacity:1}
+    20%,24%,55%{opacity:0.65}
+  }
+  .divider { width:1px; height:60px; background:rgba(0,240,255,0.1); }
+  .col { display:flex; flex-direction:column; gap:12px; }
+  .meta { font-family:'Space Mono',monospace; font-size:9px; color:#5a6a7a; letter-spacing:0.1em; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="col">
+    <div class="logo-lg">TBN</div>
+    <div class="meta">Abbrev. Logomark — Nav</div>
+  </div>
+  <div class="divider"></div>
+  <div class="col">
+    <div class="wordmark">takibineko</div>
+    <div class="meta">Full Wordmark — Display</div>
+  </div>
+  <div class="divider"></div>
+  <div class="col">
+    <div class="logo-sm">TBN</div>
+    <div class="meta">Small Nav</div>
+    <div class="logo-footer">TBN</div>
+    <div class="meta">Footer (dimmed)</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#03030f; font-family:'Space Mono',monospace; padding:24px; display:flex; flex-direction:column; gap:16px; }
+  .row { display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+  .label { font-size:9px; letter-spacing:0.3em; color:#5a6a7a; text-transform:uppercase; margin-bottom:8px; }
+
+  .btn-primary {
+    padding:12px 28px; background:transparent; border:1px solid #00f0ff; color:#00f0ff;
+    font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase;
+    cursor:pointer; position:relative; overflow:hidden; transition:color 0.3s, box-shadow 0.3s;
+  }
+  .btn-primary:hover { color:#03030f; box-shadow:0 0 30px #00f0ff, 0 0 60px rgba(0,240,255,0.3); background:#00f0ff; }
+  .btn-primary.active-state { color:#03030f; background:#00f0ff; box-shadow:0 0 30px #00f0ff; }
+
+  .btn-secondary {
+    padding:12px 28px; background:transparent; border:1px solid #5a6a7a; color:#5a6a7a;
+    font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase;
+    cursor:pointer; transition:border-color 0.3s, color 0.3s, box-shadow 0.3s;
+  }
+  .btn-secondary:hover { border-color:#ff0099; color:#ff0099; box-shadow:0 0 30px rgba(255,0,153,0.3); }
+  .btn-secondary.active-state { border-color:#ff0099; color:#ff0099; box-shadow:0 0 30px rgba(255,0,153,0.3); }
+
+  .btn-disabled {
+    padding:12px 28px; background:transparent; border:1px solid rgba(90,106,122,0.3); color:rgba(90,106,122,0.3);
+    font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase;
+    cursor:not-allowed; opacity:0.5;
+  }
+
+  .social-link {
+    font-size:10px; letter-spacing:0.2em; color:#5a6a7a; text-decoration:none;
+    text-transform:uppercase; padding:8px 14px; border:1px solid rgba(255,255,255,0.05);
+    transition:color 0.3s, border-color 0.3s;
+    cursor:pointer;
+  }
+  .social-link:hover { color:#ff0099; border-color:rgba(255,0,153,0.3); }
+</style>
+</head>
+<body>
+  <div>
+    <div class="label">Primary Button</div>
+    <div class="row">
+      <button class="btn-primary">View Services</button>
+      <button class="btn-primary active-state">Hover State</button>
+    </div>
+  </div>
+  <div>
+    <div class="label">Secondary Button</div>
+    <div class="row">
+      <button class="btn-secondary">Contact</button>
+      <button class="btn-secondary active-state">Hover State</button>
+    </div>
+  </div>
+  <div>
+    <div class="label">Disabled</div>
+    <div class="row">
+      <button class="btn-disabled">Unavailable</button>
+    </div>
+  </div>
+  <div>
+    <div class="label">Social / Ghost Link</div>
+    <div class="row">
+      <span class="social-link">GitHub</span>
+      <span class="social-link">Note</span>
+      <span class="social-link">Coconala</span>
+    </div>
+  </div>
+</body>
+</html>

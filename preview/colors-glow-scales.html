@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#03030f; font-family:'Space Mono',monospace; padding:20px; display:flex; flex-direction:column; gap:14px; }
+  .label { font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#5a6a7a; margin-bottom:6px; }
+  .glow-row { display:flex; gap:10px; align-items:center; }
+  .dot { width:28px; height:28px; border-radius:50%; }
+  .c1 { background:#00f0ff; box-shadow:0 0 4px rgba(0,240,255,0.3); }
+  .c2 { background:#00f0ff; box-shadow:0 0 10px #00f0ff, 0 0 20px rgba(0,240,255,0.4); }
+  .c3 { background:#00f0ff; box-shadow:0 0 20px #00f0ff, 0 0 40px rgba(0,240,255,0.5), 0 0 80px rgba(0,240,255,0.2); }
+  .p1 { background:#ff0099; box-shadow:0 0 4px rgba(255,0,153,0.3); }
+  .p2 { background:#ff0099; box-shadow:0 0 10px #ff0099, 0 0 20px rgba(255,0,153,0.4); }
+  .p3 { background:#ff0099; box-shadow:0 0 20px #ff0099, 0 0 40px rgba(255,0,153,0.5), 0 0 80px rgba(255,0,153,0.2); }
+  .step-label { font-size:9px; color:#5a6a7a; letter-spacing:0.1em; }
+  .grad-bar { height:6px; border-radius:0; background:linear-gradient(to right, #00f0ff, #ff0099); box-shadow:0 0 12px rgba(0,240,255,0.4); }
+  .conic-bar { height:6px; background:conic-gradient(from 0deg, #00f0ff, #ff0099, #7700ff, #00f0ff); }
+</style>
+</head>
+<body>
+  <div>
+    <div class="label">Cyan Glow Scale</div>
+    <div class="glow-row">
+      <div class="dot c1"></div><span class="step-label">Dim</span>
+      <div class="dot c2"></div><span class="step-label">Base</span>
+      <div class="dot c3"></div><span class="step-label">Strong</span>
+    </div>
+  </div>
+  <div>
+    <div class="label">Pink Glow Scale</div>
+    <div class="glow-row">
+      <div class="dot p1"></div><span class="step-label">Dim</span>
+      <div class="dot p2"></div><span class="step-label">Base</span>
+      <div class="dot p3"></div><span class="step-label">Strong</span>
+    </div>
+  </div>
+  <div>
+    <div class="label">Accent Gradient</div>
+    <div class="grad-bar"></div>
+  </div>
+  <div>
+    <div class="label">Conic (Card Border Spin)</div>
+    <div class="conic-bar"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#03030f; }
+  nav {
+    padding:20px 48px; display:flex; justify-content:space-between; align-items:center;
+    background:rgba(3,3,15,0.97); border-bottom:1px solid rgba(0,240,255,0.1);
+    backdrop-filter:blur(10px);
+  }
+  .logo {
+    font-family:'Orbitron',monospace; font-weight:900; font-size:16px; color:#00f0ff;
+    letter-spacing:0.2em;
+    text-shadow:0 0 20px #00f0ff, 0 0 40px rgba(0,240,255,0.4);
+    animation:logoFlicker 9s infinite;
+  }
+  @keyframes logoFlicker {
+    0%,19%,21%,23%,25%,54%,56%,100%{text-shadow:0 0 20px #00f0ff,0 0 40px rgba(0,240,255,0.4);opacity:1}
+    20%,24%,55%{text-shadow:none;opacity:0.65}
+  }
+  .links { display:flex; gap:40px; list-style:none; }
+  .links a {
+    font-family:'Space Mono',monospace; color:#5a6a7a; text-decoration:none; font-size:11px;
+    letter-spacing:0.2em; text-transform:uppercase; transition:color 0.3s; position:relative;
+  }
+  .links a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:1px; background:#00f0ff; transition:width 0.3s; }
+  .links a:hover, .links a.active { color:#00f0ff; }
+  .links a:hover::after, .links a.active::after { width:100%; }
+</style>
+</head>
+<body>
+  <nav>
+    <div class="logo">TBN</div>
+    <ul class="links">
+      <li><a href="#">Services</a></li>
+      <li><a href="#" class="active">Works</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#03030f; font-family:'Space Mono',monospace; padding:20px; display:flex; gap:12px; }
+  .panel { flex:1; height:100px; position:relative; overflow:hidden; display:flex; align-items:flex-end; padding:8px; }
+  .panel-label { font-size:9px; letter-spacing:0.15em; color:rgba(255,255,255,0.5); text-transform:uppercase; position:relative; z-index:2; }
+
+  .grid-bg {
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(0,240,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,240,255,0.04) 1px, transparent 1px);
+    background-size:30px 30px;
+    animation:gridPulse 6s ease-in-out infinite;
+  }
+  @keyframes gridPulse { 0%,100%{opacity:0.4} 50%{opacity:0.9} }
+
+  .scan-bg {
+    position:absolute; inset:0; background:#060614;
+    background-image:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.12) 2px,rgba(0,0,0,0.12) 4px);
+    animation:scanMove 8s linear infinite;
+  }
+  @keyframes scanMove { 0%{background-position:0 0} 100%{background-position:0 80px} }
+
+  .plasma-bg {
+    position:absolute; inset:0; background:#03030f;
+    overflow:hidden;
+  }
+  .blob {
+    position:absolute; border-radius:50%; filter:blur(40px); mix-blend-mode:screen; opacity:0.2;
+  }
+  .blob1 { width:120px; height:120px; background:radial-gradient(circle,#00f0ff,transparent 70%); top:-20px; left:-10px; animation:b1 8s ease-in-out infinite; }
+  .blob2 { width:100px; height:100px; background:radial-gradient(circle,#ff0099,transparent 70%); bottom:-20px; right:10px; animation:b2 10s ease-in-out infinite; }
+  @keyframes b1 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(60px,30px)} }
+  @keyframes b2 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-40px,-20px)} }
+
+  .card-bg { background:rgba(6,6,20,0.7); border:2px solid rgba(0,240,255,0.15); backdrop-filter:blur(10px); position:absolute; inset:0; }
+</style>
+</head>
+<body>
+  <div class="panel">
+    <div class="grid-bg"></div>
+    <span class="panel-label">Grid BG</span>
+  </div>
+  <div class="panel">
+    <div class="scan-bg"></div>
+    <span class="panel-label">Scanlines</span>
+  </div>
+  <div class="panel">
+    <div class="plasma-bg">
+      <div class="blob blob1"></div>
+      <div class="blob blob2"></div>
+    </div>
+    <span class="panel-label" style="z-index:2;position:relative;">Plasma</span>
+  </div>
+  <div class="panel">
+    <div class="card-bg"></div>
+    <span class="panel-label" style="z-index:2;position:relative;">Card Surface</span>
+  </div>
+</body>
+</html>
