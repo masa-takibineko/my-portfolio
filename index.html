@@ -8,7 +8,7 @@
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{overflow-x:hidden;cursor:none;scroll-behavior:auto}
-:root{--bg:#03030f;--bg2:#060614;--cyan:#00f0ff;--pink:#ff0099;--purple:#7700ff;--text:#c8d6e5;--dim:#5a6a7a}
+:root{--bg:#03030f;--bg2:#060614;--cyan:#00f0ff;--pink:#ff0099;--purple:#7700ff;--text:#c8d6e5;--dim:#8ab0c8}
 body{background:var(--bg);color:var(--text);font-family:'Space Mono',monospace;overflow-x:hidden}
 #cur{position:fixed;width:10px;height:10px;background:var(--cyan);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:screen;box-shadow:0 0 14px var(--cyan);transition:transform .15s,background .2s}
 #cur.h{background:var(--pink);box-shadow:0 0 14px var(--pink);transform:translate(-50%,-50%) scale(2.5)}
@@ -52,7 +52,7 @@ section{min-height:100vh;display:flex;align-items:center;justify-content:center;
 .hcta:hover{border-color:var(--cyan);box-shadow:0 0 30px rgba(0,240,255,.2)}
 .sh{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.8rem;animation:fiu 1s ease .5s both}
 @keyframes fiu{from{opacity:0;transform:translateX(-50%) translateY(20px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
-.sh span{font-size:.6rem;letter-spacing:.4em;color:var(--dim)}
+.sh span{font-size:.6rem;letter-spacing:.4em;color:rgba(138,176,200,.65)}
 .sl{width:1px;height:60px;background:linear-gradient(to bottom,var(--cyan),transparent);animation:sp 2.2s ease-in-out infinite}
 @keyframes sp{0%,100%{opacity:.3}50%{opacity:1}}
 .stag{font-size:.64rem;letter-spacing:.42em;color:var(--cyan);margin-bottom:1.2rem;display:flex;align-items:center;gap:.8rem}
@@ -63,7 +63,7 @@ section{min-height:100vh;display:flex;align-items:center;justify-content:center;
 #about{justify-content:flex-end}
 .ai{max-width:560px}
 .sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-top:2rem}
-.sk{border:1px solid rgba(0,240,255,.14);padding:.5rem 1rem;font-size:.63rem;letter-spacing:.12em;color:var(--dim);text-align:center;transition:all .3s}
+.sk{border:1px solid rgba(0,240,255,.18);padding:.5rem 1rem;font-size:.63rem;letter-spacing:.12em;color:var(--dim);text-align:center;transition:all .3s}
 .sk:hover{border-color:var(--cyan);color:var(--cyan)}
 #services{flex-direction:column;align-items:flex-start}
 .sgr{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;width:100%;max-width:1100px;margin-top:3rem}
@@ -75,7 +75,7 @@ section{min-height:100vh;display:flex;align-items:center;justify-content:center;
 .sname{font-family:'Orbitron',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:.8rem;letter-spacing:.08em}
 .sdesc{font-size:.72rem;line-height:1.9;color:var(--dim)}
 .stechs{margin-top:1.2rem;display:flex;flex-wrap:wrap;gap:.5rem}
-.tt{font-size:.58rem;letter-spacing:.1em;padding:.25rem .7rem;border:1px solid rgba(0,240,255,.2);color:var(--dim)}
+.tt{font-size:.58rem;letter-spacing:.1em;padding:.25rem .7rem;border:1px solid rgba(0,240,255,.22);color:rgba(138,176,200,.75)}
 #works{flex-direction:column;align-items:flex-start}
 .wgr{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;width:100%;max-width:1100px;margin-top:3rem}
 .wc{border:1px solid rgba(0,240,255,.08);background:rgba(6,6,20,.6);position:relative;overflow:hidden;cursor:none;transition:border-color .3s,transform .3s}
@@ -89,12 +89,38 @@ section{min-height:100vh;display:flex;align-items:center;justify-content:center;
 .wdesc{font-size:.64rem;line-height:1.8;color:var(--dim)}
 .wlink{display:inline-flex;align-items:center;gap:.4rem;margin-top:.8rem;font-size:.6rem;letter-spacing:.15em;color:var(--cyan);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .3s}
 .wlink:hover{border-color:var(--cyan)}
-.wt1{background:radial-gradient(ellipse at 30% 40%,#0a1f3a,#03030f 70%)}
-.wt2{background:radial-gradient(ellipse at 65% 30%,#1a0535,#03030f 70%)}
-.wt3{background:radial-gradient(ellipse at 50% 60%,#0a1a0a,#03030f 70%)}
-.wt4{background:radial-gradient(ellipse at 20% 70%,#1e0a18,#03030f 70%)}
-.wt5{background:radial-gradient(ellipse at 70% 40%,#0a1525,#03030f 70%)}
-.wt6{background:radial-gradient(ellipse at 40% 50%,#1a1a0a,#03030f 70%)}
+/* Work thumbnails — CSS illustrated mockups */
+.wt1,.wt2,.wt3,.wt4,.wt5,.wt6{position:relative}
+
+/* wt1: Cafe HP — warm amber/coffee */
+.wt1{background:radial-gradient(ellipse at 50% 110%,rgba(190,110,20,.5) 0%,transparent 60%),linear-gradient(170deg,#1e0d04 0%,#2e1a08 55%,#160b02 100%)}
+.wt1::before{content:'';position:absolute;top:0;left:0;right:0;height:22%;background:linear-gradient(90deg,rgba(200,130,40,.18),rgba(180,100,20,.08));border-bottom:1px solid rgba(210,150,60,.2)}
+.wt1::after{content:'';position:absolute;top:33%;left:12%;right:12%;height:2px;background:rgba(200,140,50,.25);box-shadow:0 14px 0 rgba(200,140,50,.17),0 28px 0 rgba(200,140,50,.1),0 0 60px 20px rgba(180,100,20,.15)}
+
+/* wt2: Real Estate — cool navy blue */
+.wt2{background:radial-gradient(ellipse at 20% 80%,rgba(0,60,150,.35) 0%,transparent 55%),radial-gradient(ellipse at 80% 20%,rgba(30,70,180,.2) 0%,transparent 50%),linear-gradient(160deg,#020a1a 0%,#04112c 60%,#020c1e 100%)}
+.wt2::before{content:'';position:absolute;top:0;left:0;right:0;height:20%;background:rgba(20,60,150,.2);border-bottom:1px solid rgba(50,110,220,.15)}
+.wt2::after{content:'';position:absolute;top:30%;left:8%;width:84%;height:44%;background:repeating-linear-gradient(90deg,transparent,transparent calc(33.3% - 3px),rgba(50,100,200,.1) calc(33.3% - 3px),rgba(50,100,200,.1) 33.3%);border:1px solid rgba(50,100,200,.1)}
+
+/* wt3: AI Chat — dark terminal cyan */
+.wt3{background:radial-gradient(ellipse at 75% 25%,rgba(0,240,255,.15) 0%,transparent 50%),linear-gradient(160deg,#010c0d 0%,#031013 60%,#010a0a 100%)}
+.wt3::before{content:'';position:absolute;top:8%;left:8%;right:8%;bottom:8%;border:1px solid rgba(0,240,255,.12);background:rgba(0,20,25,.4)}
+.wt3::after{content:'';position:absolute;top:18%;left:18%;width:64%;height:3px;background:rgba(0,240,255,.22);box-shadow:0 12px 0 rgba(0,240,255,.16),0 22px 0 rgba(0,240,255,.1),0 36px 0 rgba(0,200,255,.18),0 46px 0 rgba(0,200,255,.12),0 56px 0 rgba(0,200,255,.07)}
+
+/* wt4: LINE Bot — dark with green accent */
+.wt4{background:radial-gradient(ellipse at 50% 50%,rgba(0,160,70,.14) 0%,transparent 65%),linear-gradient(160deg,#020d07 0%,#03110a 60%,#010905 100%)}
+.wt4::before{content:'';position:absolute;top:0;left:0;right:0;height:22%;background:rgba(0,140,55,.18);border-bottom:1px solid rgba(0,185,80,.15)}
+.wt4::after{content:'';position:absolute;top:32%;right:14%;width:52%;height:15%;background:rgba(0,160,65,.13);border:1px solid rgba(0,185,80,.14);border-radius:10px 10px 2px 10px;box-shadow:0 24px 0 -2px rgba(0,160,65,.08),0 24px 0 -1px rgba(0,185,80,.1)}
+
+/* wt5: Yorimichi — teal map grid */
+.wt5{background:radial-gradient(ellipse at 55% 45%,rgba(0,180,150,.14) 0%,transparent 55%),linear-gradient(160deg,#020f0e 0%,#031614 60%,#011009 100%)}
+.wt5::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(0,170,140,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,170,140,.05) 1px,transparent 1px);background-size:18px 18px}
+.wt5::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:22px;height:22px;border-radius:50%;background:rgba(0,210,170,.2);box-shadow:0 0 0 8px rgba(0,210,170,.07),0 0 0 18px rgba(0,210,170,.04),0 0 40px 8px rgba(0,210,170,.25)}
+
+/* wt6: SNS Automation — purple/social */
+.wt6{background:radial-gradient(ellipse at 65% 30%,rgba(119,0,255,.2) 0%,transparent 55%),radial-gradient(ellipse at 30% 75%,rgba(255,0,153,.12) 0%,transparent 50%),linear-gradient(160deg,#080214 0%,#0d0422 60%,#060110 100%)}
+.wt6::before{content:'';position:absolute;top:10%;left:12%;right:12%;height:18%;background:rgba(119,0,255,.12);border:1px solid rgba(119,0,255,.18);box-shadow:0 0 24px rgba(119,0,255,.1)}
+.wt6::after{content:'';position:absolute;top:38%;left:12%;right:12%;bottom:10%;background:repeating-linear-gradient(0deg,transparent,transparent 10px,rgba(119,0,255,.06) 10px,rgba(119,0,255,.06) 11px);border:1px solid rgba(119,0,255,.08)}
 #contact{flex-direction:column;text-align:center}
 .ctitle{font-family:'Orbitron',sans-serif;font-weight:900;font-size:clamp(2rem,7vw,5.5rem);line-height:.88;letter-spacing:.04em;margin-bottom:3rem}
 .ctitle .g{background:linear-gradient(135deg,var(--cyan),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
@@ -105,7 +131,7 @@ section{min-height:100vh;display:flex;align-items:center;justify-content:center;
 .clink:hover{border-color:var(--cyan);color:var(--cyan)}
 .cmsg{font-size:.74rem;line-height:2.1;color:var(--dim);max-width:480px;margin:0 auto}
 footer{position:relative;z-index:10;padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(0,240,255,.06)}
-footer p{font-size:.58rem;letter-spacing:.12em;color:rgba(90,106,122,.5)}
+footer p{font-size:.58rem;letter-spacing:.12em;color:rgba(138,176,200,.45)}
 .rv{opacity:0;transform:translateY(44px)}
 @media(max-width:768px){
   nav{padding:1rem 1.5rem}.nlinks{display:none}
@@ -149,7 +175,7 @@ footer p{font-size:.58rem;letter-spacing:.12em;color:rgba(90,106,122,.5)}
     </div>
     <p class="hlabel">// Freelance Creator &amp; Developer</p>
     <h1 class="htitle">takibineko</h1>
-    <p class="hsub">アイデアを動くデジタルに変える<br><span style="color:var(--dim)">Turning Ideas into Digital Reality</span></p>
+    <p class="hsub">アイデアを動くデジタルに変える<br><span style="color:rgba(138,176,200,.7)">Turning Ideas into Digital Reality</span></p>
     <a href="#services" class="hcta"><span>EXPLORE WORKS</span><span>→</span></a>
     <div class="sh"><div class="sl"></div><span>SCROLL</span></div>
   </section>
