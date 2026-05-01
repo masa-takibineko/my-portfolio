@@ -133,6 +133,32 @@ section{min-height:100vh;display:flex;align-items:center;justify-content:center;
 footer{position:relative;z-index:10;padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(0,240,255,.06)}
 footer p{font-size:.58rem;letter-spacing:.12em;color:rgba(138,176,200,.45)}
 .rv{opacity:0;transform:translateY(44px)}
+/* ── Thumbnail UI Mockups ── */
+.wmock{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;overflow:hidden;pointer-events:none;font-family:'Space Mono',monospace}
+.mh{display:flex;justify-content:space-between;align-items:center;padding:.38rem .65rem;font-size:.4rem;letter-spacing:.08em;flex-shrink:0}
+.mb{flex:1;padding:.38rem .65rem;display:flex;flex-direction:column;overflow:hidden}
+.mtitle{font-family:'Orbitron',sans-serif;font-weight:700;font-size:.7rem;line-height:1.15;margin:.15rem 0 .38rem}
+.mlabel{font-size:.32rem;letter-spacing:.16em;margin-bottom:.2rem}
+.mcta{display:inline-block;padding:.13rem .4rem;font-size:.32rem;letter-spacing:.1em;border:1px solid;width:fit-content}
+.mbbl{padding:.2rem .4rem;font-size:.37rem;border-radius:7px 7px 7px 2px;margin-bottom:.2rem;max-width:76%;line-height:1.4}
+.mbbl.r{margin-left:auto;border-radius:7px 7px 2px 7px}
+.minp{display:flex;gap:.18rem;margin-top:auto;border-top:1px solid rgba(255,255,255,.05);padding-top:.28rem}
+.minp-f{flex:1;border:1px solid;background:transparent;padding:.16rem .28rem;font-size:.34rem;font-family:'Space Mono',monospace}
+.minp-b{padding:.16rem .32rem;font-size:.34rem}
+.mfl{display:flex;align-items:center;gap:.2rem;flex-wrap:wrap;margin-top:.28rem}
+.mstep{padding:.18rem .3rem;font-size:.33rem;letter-spacing:.04em;border:1px solid}
+.marr{font-size:.42rem;opacity:.35}
+.mprog{margin-top:.28rem}
+.mprog-l{font-size:.3rem;letter-spacing:.06em;opacity:.55}
+.mprog-b{height:3px;border-radius:2px;margin-top:.15rem;background:rgba(255,255,255,.05)}
+.mprog-f{height:100%;border-radius:2px}
+.mmap-area{flex:1;border:1px solid;margin:.22rem 0;position:relative;overflow:hidden;min-height:0}
+.mmap-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:16px 16px}
+.mpin{position:absolute;width:6px;height:6px;border-radius:50%;transform:translate(-50%,-50%)}
+.mpin::after{content:'';position:absolute;inset:-5px;border-radius:50%;border:1px solid currentColor;opacity:.3}
+.msbar{display:flex;align-items:center;gap:.2rem;border:1px solid;padding:.16rem .38rem;font-size:.34rem;margin-bottom:.2rem;flex-shrink:0}
+.mpcard{border:1px solid;padding:.26rem .28rem;font-size:.33rem;line-height:1.5;display:flex;flex-direction:column;gap:.2rem}
+.mpimg{height:26px}
 @media(max-width:768px){
   nav{padding:1rem 1.5rem}.nlinks{display:none}
   section{padding:5rem 1.5rem}
@@ -225,22 +251,169 @@ footer p{font-size:.58rem;letter-spacing:.12em;color:rgba(138,176,200,.45)}
       <p class="stag rv">SELECTED WORKS</p>
       <h2 class="stitle rv">制作実績</h2>
       <div class="wgr">
-        <div class="wc"><div class="wthumb"><div class="wbg wt1"></div></div>
-          <div class="wmeta"><p class="wcat">HP制作</p><h3 class="wtitle">チャティハトウ</h3><p class="wdesc">老舗カフェの雰囲気を伝える洗練されたHP。アニメーション演出でブランド世界観を表現。</p><a href="https://masa-takibineko.github.io/chatei-hatou-demo/" target="_blank" class="wlink">VIEW DEMO →</a></div>
+        <!-- 1: Cafe HP -->
+        <div class="wc">
+          <div class="wthumb">
+            <div class="wbg wt1"></div>
+            <div class="wmock">
+              <div class="mh" style="color:rgba(200,140,50,.7);border-bottom:1px solid rgba(200,140,50,.15);background:rgba(30,13,4,.5)">
+                <b style="font-family:'Orbitron',sans-serif;font-size:.42rem">CAFE</b>
+                <span style="opacity:.45;font-size:.34rem">MENU · STORY · ACCESS</span>
+              </div>
+              <div class="mb">
+                <div class="mlabel" style="color:rgba(200,140,50,.5)">// SPECIALTY COFFEE</div>
+                <div class="mtitle" style="color:rgba(225,160,65,.9)">カフェ<br>HP</div>
+                <div class="mcta" style="border-color:rgba(200,140,50,.3);color:rgba(200,140,50,.65)">ご予約はこちら →</div>
+                <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.2rem;margin-top:.35rem">
+                  <div style="background:rgba(200,140,50,.09);border:1px solid rgba(200,140,50,.14);height:26px"></div>
+                  <div style="background:rgba(200,140,50,.07);border:1px solid rgba(200,140,50,.1);height:26px"></div>
+                  <div style="background:rgba(200,140,50,.05);border:1px solid rgba(200,140,50,.08);height:26px"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wmeta"><p class="wcat">HP制作</p><h3 class="wtitle">カフェHP</h3><p class="wdesc">老舗カフェの雰囲気を伝える洗練されたHP。アニメーション演出でブランド世界観を表現。</p><a href="https://masa-takibineko.github.io/chatei-hatou-demo/" target="_blank" class="wlink">VIEW DEMO →</a></div>
         </div>
-        <div class="wc"><div class="wthumb"><div class="wbg wt2"></div></div>
+        <!-- 2: Real Estate -->
+        <div class="wc">
+          <div class="wthumb">
+            <div class="wbg wt2"></div>
+            <div class="wmock">
+              <div class="mh" style="color:rgba(80,140,220,.75);border-bottom:1px solid rgba(60,110,200,.14);background:rgba(2,10,26,.55)">
+                <b style="font-family:'Orbitron',sans-serif;font-size:.4rem">REAL ESTATE</b>
+                <span style="opacity:.4;font-size:.33rem">物件 · 会社概要</span>
+              </div>
+              <div class="mb">
+                <div class="mlabel" style="color:rgba(80,140,220,.5)">PICKUP PROPERTIES</div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:.22rem;flex:1">
+                  <div class="mpcard" style="border-color:rgba(60,110,200,.18);color:rgba(80,140,220,.6)">
+                    <div class="mpimg" style="background:rgba(60,110,200,.1);border:1px solid rgba(60,110,200,.12)"></div>
+                    <span>¥3,200万</span><span style="opacity:.55;font-size:.3rem">渋谷区 3LDK</span>
+                  </div>
+                  <div class="mpcard" style="border-color:rgba(60,110,200,.13);color:rgba(80,140,220,.55)">
+                    <div class="mpimg" style="background:rgba(60,110,200,.08);border:1px solid rgba(60,110,200,.1)"></div>
+                    <span>¥5,800万</span><span style="opacity:.5;font-size:.3rem">港区 2LDK</span>
+                  </div>
+                  <div class="mpcard" style="border-color:rgba(60,110,200,.1);color:rgba(80,140,220,.5)">
+                    <div class="mpimg" style="background:rgba(60,110,200,.06);border:1px solid rgba(60,110,200,.08)"></div>
+                    <span>¥2,800万</span><span style="opacity:.45;font-size:.3rem">新宿区 1LDK</span>
+                  </div>
+                  <div class="mpcard" style="border-color:rgba(60,110,200,.08);color:rgba(80,140,220,.45)">
+                    <div class="mpimg" style="background:rgba(60,110,200,.05);border:1px solid rgba(60,110,200,.06)"></div>
+                    <span>¥4,200万</span><span style="opacity:.4;font-size:.3rem">目黒区 3LDK</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="wmeta"><p class="wcat">LP制作</p><h3 class="wtitle">不動産HP</h3><p class="wdesc">不動産会社向けLP。信頼感を演出するレイアウトで問い合わせ率向上を実現。</p><a href="https://masa-takibineko.github.io/realestate-hp/" target="_blank" class="wlink">VIEW DEMO →</a></div>
         </div>
-        <div class="wc"><div class="wthumb"><div class="wbg wt3"></div></div>
+        <!-- 3: AI Chat -->
+        <div class="wc">
+          <div class="wthumb">
+            <div class="wbg wt3"></div>
+            <div class="wmock">
+              <div class="mh" style="color:rgba(0,240,255,.72);border-bottom:1px solid rgba(0,240,255,.12);background:rgba(0,18,22,.6)">
+                <span>◉ AI ASSISTANT</span>
+                <span style="color:rgba(0,240,255,.4);font-size:.33rem">● ONLINE</span>
+              </div>
+              <div class="mb" style="gap:0">
+                <div class="mbbl" style="background:rgba(0,240,255,.08);border:1px solid rgba(0,240,255,.12);color:rgba(0,240,255,.75)">こんにちは！何でも聞いてください。</div>
+                <div class="mbbl r" style="background:rgba(119,0,255,.1);border:1px solid rgba(119,0,255,.16);color:rgba(180,140,255,.8)">社内規程について教えて</div>
+                <div class="mbbl" style="background:rgba(0,240,255,.06);border:1px solid rgba(0,240,255,.1);color:rgba(0,240,255,.65)">RAG検索中... ✓ 回答を生成</div>
+                <div class="minp">
+                  <div class="minp-f" style="border-color:rgba(0,240,255,.15);color:rgba(0,240,255,.4)">メッセージを入力...</div>
+                  <div class="minp-b" style="background:rgba(0,240,255,.14);color:rgba(0,240,255,.8);border:1px solid rgba(0,240,255,.2)">→</div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="wmeta"><p class="wcat">AI開発</p><h3 class="wtitle">AI Chat App</h3><p class="wdesc">Streamlit + Claude APIで構築したビジネス向けAIチャット。RAG対応で社内情報を検索可能。</p><a href="https://github.com/masa-takibineko/streamlit-llm-app" target="_blank" class="wlink">VIEW REPO →</a></div>
         </div>
-        <div class="wc"><div class="wthumb"><div class="wbg wt4"></div></div>
+        <!-- 4: LINE Bot -->
+        <div class="wc">
+          <div class="wthumb">
+            <div class="wbg wt4"></div>
+            <div class="wmock">
+              <div class="mh" style="color:rgba(255,255,255,.75);border-bottom:1px solid rgba(0,185,80,.2);background:rgba(0,130,50,.2)">
+                <span>← <b style="font-size:.42rem">予約 Bot</b></span>
+                <span style="opacity:.35;font-size:.38rem">≡</span>
+              </div>
+              <div class="mb" style="gap:0">
+                <div class="mbbl" style="background:rgba(0,185,80,.1);border:1px solid rgba(0,185,80,.16);color:rgba(0,220,100,.75)">ご予約を承ります。<br>ご希望の時間帯を選択してください。</div>
+                <div style="display:flex;gap:.18rem;margin:.18rem 0;flex-wrap:wrap">
+                  <div style="border:1px solid rgba(0,185,80,.25);color:rgba(0,205,90,.65);padding:.13rem .32rem;font-size:.32rem;border-radius:10px">午前</div>
+                  <div style="border:1px solid rgba(0,185,80,.25);color:rgba(0,205,90,.65);padding:.13rem .32rem;font-size:.32rem;border-radius:10px">午後</div>
+                  <div style="border:1px solid rgba(0,185,80,.25);color:rgba(0,205,90,.65);padding:.13rem .32rem;font-size:.32rem;border-radius:10px">夜間</div>
+                </div>
+                <div class="mbbl r" style="background:rgba(0,185,80,.12);border:1px solid rgba(0,185,80,.18);color:rgba(0,215,95,.7)">午後でお願いします</div>
+                <div class="mbbl" style="background:rgba(0,185,80,.07);border:1px solid rgba(0,185,80,.12);color:rgba(0,210,90,.6);font-size:.34rem">13:00〜で承りました ✓<br>確認メールを送信しました</div>
+              </div>
+            </div>
+          </div>
           <div class="wmeta"><p class="wcat">Bot開発</p><h3 class="wtitle">LINE Auto Bot</h3><p class="wdesc">予約受付・FAQ自動返信・顧客フォローを自動化するLINE公式アカウントBotシステム。</p><a href="https://github.com/masa-takibineko" target="_blank" class="wlink">VIEW GITHUB →</a></div>
         </div>
-        <div class="wc"><div class="wthumb"><div class="wbg wt5"></div></div>
+        <!-- 5: Yorimichi -->
+        <div class="wc">
+          <div class="wthumb">
+            <div class="wbg wt5"></div>
+            <div class="wmock">
+              <div class="mh" style="color:rgba(0,200,160,.75);border-bottom:1px solid rgba(0,190,150,.13)">
+                <span style="font-family:'Orbitron',sans-serif;font-size:.4rem">YORIMICHI</span>
+                <span style="opacity:.4;font-size:.33rem">MAP · SPOTS</span>
+              </div>
+              <div class="mb">
+                <div class="msbar" style="border-color:rgba(0,190,150,.18);color:rgba(0,200,160,.5)">
+                  <span style="opacity:.5">◎</span>&nbsp;エリアを検索...
+                </div>
+                <div class="mmap-area" style="border-color:rgba(0,190,150,.15)">
+                  <div class="mmap-grid"></div>
+                  <div class="mpin" style="color:rgba(0,210,170,1);background:rgba(0,210,170,.65);top:38%;left:42%"></div>
+                  <div class="mpin" style="color:rgba(0,210,170,.85);background:rgba(0,210,170,.48);top:62%;left:65%"></div>
+                  <div class="mpin" style="color:rgba(0,210,170,.7);background:rgba(0,210,170,.35);top:24%;left:74%"></div>
+                  <div class="mpin" style="color:rgba(0,210,170,.6);background:rgba(0,210,170,.25);top:72%;left:28%"></div>
+                  <div class="mpin" style="color:rgba(0,210,170,.5);background:rgba(0,210,170,.18);top:48%;left:20%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="wmeta"><p class="wcat">HP制作</p><h3 class="wtitle">よりみち</h3><p class="wdesc">近隣スポット情報サービスのWebアプリ。マップ連携とフィルタリングでUXを向上。</p><a href="https://masa-takibineko.github.io/yorimichi/" target="_blank" class="wlink">VIEW DEMO →</a></div>
         </div>
-        <div class="wc"><div class="wthumb"><div class="wbg wt6"></div></div>
+        <!-- 6: SNS Auto Pipeline -->
+        <div class="wc">
+          <div class="wthumb">
+            <div class="wbg wt6"></div>
+            <div class="wmock">
+              <div class="mh" style="color:rgba(150,80,255,.8);border-bottom:1px solid rgba(130,50,255,.15);background:rgba(8,2,20,.5)">
+                <span style="font-family:'Orbitron',sans-serif;font-size:.38rem">AUTO PIPELINE</span>
+                <span style="background:rgba(130,50,255,.14);border:1px solid rgba(130,50,255,.22);color:rgba(150,80,255,.75);padding:.07rem .28rem;font-size:.3rem">▶ RUNNING</span>
+              </div>
+              <div class="mb">
+                <div class="mlabel" style="color:rgba(150,80,255,.5)">// WORKFLOW</div>
+                <div class="mfl">
+                  <div class="mstep" style="border-color:rgba(130,50,255,.28);color:rgba(160,90,255,.75)">台本</div>
+                  <div class="marr" style="color:rgba(150,80,255,.5)">→</div>
+                  <div class="mstep" style="border-color:rgba(130,50,255,.22);color:rgba(150,80,255,.65)">音声</div>
+                  <div class="marr" style="color:rgba(150,80,255,.4)">→</div>
+                  <div class="mstep" style="border-color:rgba(130,50,255,.18);color:rgba(140,70,255,.55)">動画</div>
+                  <div class="marr" style="color:rgba(150,80,255,.35)">→</div>
+                  <div class="mstep" style="border-color:rgba(130,50,255,.14);color:rgba(140,70,255,.5)">投稿</div>
+                </div>
+                <div class="mprog">
+                  <div class="mprog-l" style="color:rgba(150,80,255,.6)">YouTube&nbsp;&nbsp;82%</div>
+                  <div class="mprog-b"><div class="mprog-f" style="width:82%;background:linear-gradient(90deg,rgba(130,50,255,.65),rgba(200,100,255,.45))"></div></div>
+                </div>
+                <div class="mprog">
+                  <div class="mprog-l" style="color:rgba(150,80,255,.5)">X (Twitter)&nbsp;&nbsp;64%</div>
+                  <div class="mprog-b"><div class="mprog-f" style="width:64%;background:linear-gradient(90deg,rgba(130,50,255,.48),rgba(200,100,255,.3))"></div></div>
+                </div>
+                <div class="mprog">
+                  <div class="mprog-l" style="color:rgba(150,80,255,.4)">Instagram&nbsp;&nbsp;51%</div>
+                  <div class="mprog-b"><div class="mprog-f" style="width:51%;background:linear-gradient(90deg,rgba(130,50,255,.35),rgba(200,100,255,.2))"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="wmeta"><p class="wcat">自動化</p><h3 class="wtitle">SNS自動投稿</h3><p class="wdesc">動画生成からYouTube/X投稿まで全自動化。Claude AIで台本→音声→動画→投稿のパイプライン。</p><a href="https://github.com/masa-takibineko" target="_blank" class="wlink">VIEW GITHUB →</a></div>
         </div>
       </div>
