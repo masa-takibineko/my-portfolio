@@ -28,7 +28,10 @@ body{background:var(--bg);color:var(--text);font-family:'Space Mono',monospace;o
 
 /* ── Nav ── */
 #main-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.5rem 4rem;display:flex;justify-content:space-between;align-items:center;transition:background .4s;}
-.nav-logo{font-family:'Orbitron',sans-serif;font-weight:900;font-size:1.2rem;color:var(--cyan);text-shadow:0 0 20px var(--cyan);letter-spacing:.2em;}
+.nav-logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;}
+.nav-logo img{height:36px;width:auto;filter:drop-shadow(0 0 8px rgba(0,240,255,.5));transition:filter .3s;}
+.nav-logo:hover img{filter:drop-shadow(0 0 16px rgba(0,240,255,.9));}
+.nav-logo-text{font-family:'Orbitron',sans-serif;font-weight:900;font-size:1.2rem;color:var(--cyan);text-shadow:0 0 20px var(--cyan);letter-spacing:.2em;}
 .nav-links{display:flex;gap:2.5rem;list-style:none;}
 .nav-links a{color:var(--text-dim);text-decoration:none;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;transition:color .3s;position:relative;}
 .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--cyan);transition:width .3s;}
@@ -151,7 +154,10 @@ body{background:var(--bg);color:var(--text);font-family:'Space Mono',monospace;o
 
 <!-- Nav -->
 <nav id="main-nav">
-  <div class="nav-logo">TBN</div>
+  <a class="nav-logo" href="#" onclick="jumpTo('hero');return false;">
+    <img src="assets/cat-white.png" alt="takibineko">
+    <span class="nav-logo-text">TBN</span>
+  </a>
   <ul class="nav-links">
     <li><a href="#" data-target="services">Services</a></li>
     <li><a href="#" data-target="works">Works</a></li>
