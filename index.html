@@ -261,6 +261,16 @@ main,footer{margin-left:var(--rail);}
 .work-card:hover .go::after{width:58px;}
 .works-more{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:clamp(40px,6vw,72px);padding-top:clamp(26px,3vw,40px);border-top:1px solid var(--rule);}
 .works-more p{font-family:var(--mincho);font-weight:500;font-size:clamp(1rem,1.5vw,1.25rem);letter-spacing:0.1em;}
+.demo-cards{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,3vw,36px);margin-top:clamp(24px,3.5vw,40px);}
+.demo-card{display:flex;flex-direction:column;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 12px 40px -16px rgba(28,43,58,0.18);transition:box-shadow .4s,transform .4s;}
+.demo-card:hover{box-shadow:0 24px 56px -16px rgba(28,43,58,0.26);transform:translateY(-4px);}
+.demo-card-img{aspect-ratio:16/9;overflow:hidden;}
+.demo-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}
+.demo-card:hover .demo-card-img img{transform:scale(1.04);}
+.demo-card-body{padding:clamp(14px,2.5vw,22px);display:flex;flex-direction:column;gap:6px;}
+.demo-card-title{font-family:var(--mincho);font-size:clamp(0.95rem,1.4vw,1.1rem);font-weight:500;color:var(--ink);line-height:1.5;}
+.demo-card-title small{font-family:var(--gothic);font-size:0.78rem;font-weight:400;color:var(--ink-2);letter-spacing:0.08em;}
+.demo-card-link{font-size:0.75rem;font-weight:700;letter-spacing:0.14em;color:var(--sea);margin-top:4px;}
 
 .btn{
   position:relative;display:inline-flex;align-items:center;gap:16px;overflow:hidden;isolation:isolate;
@@ -350,6 +360,7 @@ footer{position:relative;background:var(--paper);padding:clamp(48px,7vw,96px) va
   .hero-tags b{width:12px;margin:0 7px;}
   .hero-tags{letter-spacing:0.1em;}
   .btn{width:100%;justify-content:space-between;}
+  .demo-cards{grid-template-columns:1fr;}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important;}
@@ -577,8 +588,29 @@ footer{position:relative;background:var(--paper);padding:clamp(48px,7vw,96px) va
   </div>
 
   <div class="works-more rv">
-    <p>着物店・カフェ・サロンなど、業種別のHP制作デモも公開しています。</p>
-    <a class="btn" href="https://masa-takibineko.github.io/hp-demos/"><span>HP制作デモ一覧を見る</span><i>→</i></a>
+    <p>業種別のHPデモも制作しています。</p>
+  </div>
+  <div class="demo-cards rv">
+    <a class="demo-card" href="https://masa-takibineko.github.io/hp-demos/portfolio_cafe.html" target="_blank" rel="noopener">
+      <div class="demo-card-img">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80&auto=format&fit=crop" alt="カフェHPデモ" loading="lazy">
+      </div>
+      <div class="demo-card-body">
+        <span class="work-cat">HP制作</span>
+        <p class="demo-card-title">珈琲と焙煎の店<br><small>カフェ・喫茶 デモ</small></p>
+        <span class="demo-card-link">VIEW DEMO →</span>
+      </div>
+    </a>
+    <a class="demo-card" href="https://masa-takibineko.github.io/hp-demos/portfolio_wellness.html" target="_blank" rel="noopener">
+      <div class="demo-card-img">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80&auto=format&fit=crop" alt="整体院HPデモ" loading="lazy">
+      </div>
+      <div class="demo-card-body">
+        <span class="work-cat">HP制作</span>
+        <p class="demo-card-title">やすらぎ整体院<br><small>整体・リラクゼーション デモ</small></p>
+        <span class="demo-card-link">VIEW DEMO →</span>
+      </div>
+    </a>
   </div>
 </section>
 
